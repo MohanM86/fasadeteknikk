@@ -13,3 +13,17 @@ export interface LeadFormData {
   navn: string; telefon: string; postnummer: string;
   tjeneste: string; beskrivelse?: string; samtykke: boolean;
 }
+export interface Firma {
+  navn: string;
+  orgnr: string;
+  orgform: string;
+  nace: string;
+  naceBeskrivelse: string;
+  kategori: string;
+  adresse: string;
+  postnummer: string;
+  poststed: string;
+  stiftet: string;
+  mva: boolean;
+  aktivitet: string;
+}

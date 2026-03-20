@@ -1,30 +1,44 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { ArrowRight, MapPin, ArrowUpRight } from "lucide-react";
+import { ArrowRight, MapPin, ArrowUpRight, Building2 } from "lucide-react";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import StickyMobileCTA from "@/components/layout/StickyMobileCTA";
 import LeadForm from "@/components/forms/LeadForm";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import FAQ from "@/components/ui/FAQ";
-import { KOMMUNER, getKommune, getAllKommuneSlugs, getKommunerByFylke } from "@/data/geografi";
+import FirmaCatalog from "@/components/ui/FirmaCatalog";
+import {
+  getKommune,
+  getAllKommuneSlugs,
+  getKommunerByFylke,
+} from "@/data/geografi";
 import { TJENESTER } from "@/data/tjenester";
+import { getFirmaByKommune, hasFirmaData } from "@/data/firma";
 import { formatPrisIntervall } from "@/lib/utils";
 
-interface Props { params: { slug: string } }
+interface Props {
+  params: { slug: string };
+}
 
 export async function generateStaticParams() {
-  return getAllKommuneSlugs().map(slug => ({ slug }));
+  return getAllKommuneSlugs().map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const kommune = getKommune(params.slug);
   if (!kommune) return {};
+  const firmaCount = getFirmaByKommune(params.slug).length;
+  const desc = firmaCount > 0
+    ? `${firmaCount} fasadefirma i ${kommune.navn}. Finn lokale firma for rehabilitering, kledning, maling og etterisolering. Gratis tilbud.`
+    : kommune.seoDesc;
   return {
     title: `${kommune.seoTitle} | Fasadeteknikk.no`,
-    description: kommune.seoDesc,
-    alternates: { canonical: `https://fasadeteknikk.no/kommune/${kommune.slug}` },
+    description: desc,
+    alternates: {
+      canonical: `https://fasadeteknikk.no/kommune/${kommune.slug}`,
+    },
   };
 }
 
@@ -32,8 +46,11 @@ export default function KommuneSide({ params }: Props) {
   const kommune = getKommune(params.slug);
   if (!kommune) notFound();
 
+  const firma = getFirmaByKommune(params.slug);
+  const harFirma = firma.length > 0;
+
   const nabokommuner = getKommunerByFylke(kommune.fylkeSlug)
-    .filter(k => k.slug !== kommune.slug)
+    .filter((k) => k.slug !== kommune.slug)
     .slice(0, 8);
 
   const faqItems = [
@@ -42,8 +59,10 @@ export default function KommuneSide({ params }: Props) {
       svar: `Typiske priser i ${kommune.navn}: maling 300–800 kr/kvm, kledning 1 200–3 500 kr/kvm, etterisolering 800–2 500 kr/kvm og komplett rehabilitering 1 500–4 500 kr/kvm. Be om tilbud for eksakt pris.`,
     },
     {
-      sporsmal: `Finnes det fasadefirma i ${kommune.navn}?`,
-      svar: `Vi matcher deg med kvalifiserte fasadefirma som jobber i ${kommune.navn} og ${kommune.fylke}. Fyll ut skjemaet for å motta tilbud innen 24 timer.`,
+      sporsmal: `Hvor mange fasadefirma finnes i ${kommune.navn}?`,
+      svar: harFirma
+        ? `Det er ${firma.length} registrerte firma innen fasade, maling, murer og byggearbeid i ${kommune.navn} ifølge Brønnøysundregistrene. Bruk filteret over for å finne riktig firma for ditt prosjekt.`
+        : `Vi kobler deg med kvalifiserte fasadefirma som jobber i ${kommune.navn} og ${kommune.fylke}. Fyll ut skjemaet for å motta tilbud innen 24 timer.`,
     },
     {
       sporsmal: `Trenger jeg byggetillatelse i ${kommune.navn} for fasadearbeid?`,
@@ -62,13 +81,13 @@ export default function KommuneSide({ params }: Props) {
         <div className="container-site pt-5 pb-2">
           <Breadcrumb
             items={[
-              { navn: "Fylker", href: `/fylke/${kommune.fylkeSlug}` },
               { navn: kommune.fylke, href: `/fylke/${kommune.fylkeSlug}` },
               { navn: `Fasade ${kommune.navn}` },
             ]}
           />
         </div>
 
+        {/* Hero */}
         <section className="hero-pattern" aria-labelledby="kommune-h">
           <div className="container-site py-10 sm:py-14">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
@@ -85,18 +104,33 @@ export default function KommuneSide({ params }: Props) {
                   <span className="text-brand-500">{kommune.navn}</span>
                 </h1>
                 <p className="text-body-lg text-neutral-500 mb-5">
-                  {kommune.kortTekst} Finn kvalifiserte fasadefirma i {kommune.navn} for rehabilitering, kledning, maling, etterisolering og takarbeid. Gratis og uforpliktende tilbud.
+                  {kommune.kortTekst} Finn kvalifiserte fasadefirma i{" "}
+                  {kommune.navn} for rehabilitering, kledning, maling,
+                  etterisolering og takarbeid.
+                  {harFirma && ` ${firma.length} firma registrert.`}
                 </p>
                 <div className="flex flex-wrap gap-3 mb-5">
                   <div className="badge-neutral">
                     {kommune.innbyggere.toLocaleString("nb-NO")} innbyggere
                   </div>
                   <div className="badge-neutral">{kommune.fylke}</div>
+                  {harFirma && (
+                    <div className="badge-brand">
+                      <Building2 className="w-3 h-3" />
+                      {firma.length} firma
+                    </div>
+                  )}
                 </div>
-                <Link href="#tilbud" className="btn-primary">
-                  Få gratis tilbud i {kommune.navn}{" "}
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
+                <div className="flex flex-wrap gap-3">
+                  <Link href="#tilbud" className="btn-primary">
+                    Få gratis tilbud <ArrowRight className="w-4 h-4" />
+                  </Link>
+                  {harFirma && (
+                    <Link href="#firma" className="btn-secondary">
+                      Se firma <Building2 className="w-4 h-4" />
+                    </Link>
+                  )}
+                </div>
               </div>
               <div id="tilbud">
                 <LeadForm kilde={`kommune-${kommune.slug}`} />
@@ -105,7 +139,21 @@ export default function KommuneSide({ params }: Props) {
           </div>
         </section>
 
-        <section className="section-white section-py-sm">
+        {/* Firma catalog – only when we have data */}
+        {harFirma && (
+          <section
+            id="firma"
+            className="section-white section-py-sm"
+            aria-labelledby="firma-h"
+          >
+            <div className="container-site">
+              <FirmaCatalog firma={firma} kommuneNavn={kommune.navn} />
+            </div>
+          </section>
+        )}
+
+        {/* Tjenester */}
+        <section className="section-light section-py-sm">
           <div className="container-site">
             <h2 className="font-display font-bold text-heading-xl text-neutral-900 mb-2">
               Fasadetjenester i {kommune.navn}
@@ -114,7 +162,7 @@ export default function KommuneSide({ params }: Props) {
               Vi formidler tilbud fra lokale fagfolk på alle typer fasadearbeid.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
-              {TJENESTER.map(t => (
+              {TJENESTER.map((t) => (
                 <Link
                   key={t.slug}
                   href={`/tjenester/${t.slug}`}
@@ -132,30 +180,45 @@ export default function KommuneSide({ params }: Props) {
           </div>
         </section>
 
-        {/* SEO tekst for kommunen */}
-        <section className="section-light section-py-sm">
+        {/* SEO text */}
+        <section className="section-white section-py-sm">
           <div className="container-site max-w-3xl">
             <h2 className="font-display font-bold text-heading-xl text-neutral-900 mb-5">
               Fasadearbeid i {kommune.navn} – hva du bør vite
             </h2>
             <div className="text-body-md text-neutral-600 leading-relaxed space-y-4">
               <p>
-                Å oppgradere fasaden i {kommune.navn} er en investering som beskytter boligen og øker verdien. Enten du trenger enkel maling, ny kledning eller komplett rehabilitering, er det viktig å velge riktig firma for jobben.
+                Å oppgradere fasaden i {kommune.navn} er en investering som
+                beskytter boligen og øker verdien. Enten du trenger enkel
+                maling, ny kledning eller komplett rehabilitering, er det
+                viktig å velge riktig firma for jobben.
+              </p>
+              {harFirma && (
+                <p>
+                  I {kommune.navn} er det {firma.length} registrerte firma
+                  innen fasade, maling og byggearbeid ifølge
+                  Brønnøysundregistrene. Bruk firmakatalogen over for å finne
+                  riktig leverandør basert på tjenestetype, selskapsform og
+                  andre kriterier.
+                </p>
+              )}
+              <p>
+                I {kommune.navn}, som i resten av {kommune.fylke}, varierer
+                prisene avhengig av tilstand, materialvalg og tilgjengelighet.
+                Det lønner seg alltid å innhente minst tre tilbud og
+                sammenligne disse nøye.
               </p>
               <p>
-                I {kommune.navn}, som i resten av {kommune.fylke}, varierer prisene avhengig av tilstand, materialvalg og tilgjengelighet. Det lønner seg alltid å innhente minst tre tilbud og sammenligne disse nøye.
-              </p>
-              <p>
-                Klimaet i {kommune.fylke} stiller spesifikke krav til materialvalg. Et lokalt firma kjenner forholdene og kan anbefale de beste løsningene for nettopp din bolig.
-              </p>
-              <p>
-                Fasadeteknikk.no kobler deg med kvalifiserte fagfolk i {kommune.navn}-området. Alle firma vi samarbeider med er seriøse aktører med erfaring fra regionen.
+                Klimaet i {kommune.fylke} stiller spesifikke krav til
+                materialvalg. Et lokalt firma kjenner forholdene og kan
+                anbefale de beste løsningene for nettopp din bolig.
               </p>
             </div>
           </div>
         </section>
 
-        <section className="section-white section-py-sm">
+        {/* FAQ */}
+        <section className="section-light section-py-sm">
           <div className="container-site max-w-3xl">
             <FAQ
               items={faqItems}
@@ -164,14 +227,15 @@ export default function KommuneSide({ params }: Props) {
           </div>
         </section>
 
+        {/* Neighbour kommuner */}
         {nabokommuner.length > 0 && (
-          <section className="section-light section-py-sm">
+          <section className="section-white section-py-sm">
             <div className="container-site">
               <h2 className="font-display font-bold text-heading-xl text-neutral-900 mb-4">
                 Andre kommuner i {kommune.fylke}
               </h2>
               <div className="flex flex-wrap gap-2">
-                {nabokommuner.map(k => (
+                {nabokommuner.map((k) => (
                   <Link
                     key={k.slug}
                     href={`/kommune/${k.slug}`}
@@ -191,6 +255,7 @@ export default function KommuneSide({ params }: Props) {
           </section>
         )}
 
+        {/* CTA */}
         <section className="section-py-sm">
           <div className="container-site">
             <div className="cta-block text-center relative z-10">
