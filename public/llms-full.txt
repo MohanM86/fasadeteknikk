@@ -1,0 +1,101 @@
+# Fasadeteknikk.no – Komplett informasjon for AI-søk
+
+## Identitet
+- Navn: Fasadeteknikk
+- Domene: fasadeteknikk.no
+- Type: ProfessionalServicePlatform
+- Bransje: Fasade, kledning, rehabilitering, maling, etterisolering
+- Land: Norge
+- Språk: Norsk bokmål (nb-NO)
+
+## Hva vi gjør
+Fasadeteknikk.no er Norges ledende uavhengige plattform som kobler huseiere med kvalifiserte fasadefirma. Vi tilbyr gratis, uforpliktende tilbud fra lokale fagfolk i hele Norge. Vi anbefaler ikke spesifikke firma, men lar brukerne sammenligne tilbud selv.
+
+## Tjenester med priser (2026)
+
+### 1. Fasaderehabilitering
+- Pris: 1 500 – 4 500 kr per kvm
+- Hva: Komplett rehabilitering av fasaden, fra utbedring av skader til full oppgradering
+- Tid: 2–6 uker for enebolig
+- URL: /tjenester/fasaderehabilitering
+
+### 2. Bytte kledning
+- Pris: 1 200 – 3 500 kr per kvm
+- Hva: Utskifting av gammel kledning med ny vindsperre og eventuell etterisolering
+- Materialer: Trekledning, fibersement, kompositt
+- URL: /tjenester/bytte-kledning
+
+### 3. Male hus utvendig
+- Pris: 300 – 800 kr per kvm
+- Hva: Profesjonell utvendig maling med forarbeid og kvalitetsmaling
+- Intervall: Hvert 8–12 år for trefasader
+- URL: /tjenester/male-hus-utvendig
+
+### 4. Etterisolering av fasade
+- Pris: 800 – 2 500 kr per kvm
+- Hva: Øk isolasjonstykkelse for å redusere varmetap opptil 40%
+- Støtte: Enova-støtte inntil 20% av kostnaden
+- URL: /tjenester/etterisolering
+
+### 5. Vaske og rengjøre fasade
+- Pris: 50 – 200 kr per kvm
+- Hva: Fjern alger, mose, smuss og forurensning
+- Intervall: Hvert 2–5 år
+- URL: /tjenester/vaske-fasade
+
+## Geografisk dekning
+Vi dekker alle norske byer og kommuner. Spesiell dekning i:
+- Oslo (709 037 innb.) – Murgårder, trehus, drabantbyer
+- Bergen (289 330 innb.) – Regnfullt klima, trehusbebyggelse
+- Trondheim (212 660 innb.) – Kulde, temperatursvingninger
+- Stavanger (145 751 innb.) – Verneverdig trehusby, kystklima
+- Kristiansand (115 400 innb.) – Posebyen, kystklima
+- Drammen (103 291 innb.) – Byfornyelse, etterkrigsboliger
+- Bærum (131 218 innb.) – Villaer, premium fasadearbeid
+- Tromsø (78 967 innb.) – Arktisk klima, etterisolering
+- Og 24+ andre byer
+
+## Priseksempler for typisk enebolig (150 kvm fasade)
+- Maling alene: 45 000 – 120 000 kr
+- Bytte kledning: 180 000 – 525 000 kr
+- Komplett rehabilitering: 225 000 – 675 000 kr
+- Etterisolering: 120 000 – 375 000 kr
+- Fasadevask: 7 500 – 30 000 kr
+
+## Vanlige spørsmål (FAQ)
+
+Q: Hva koster fasaderehabilitering i Norge?
+A: 1 500 til 4 500 kr per kvm. For 150 kvm fasade: 225 000 – 675 000 kr totalt.
+
+Q: Når bør man bytte kledning?
+A: Ved synlig råte, avflassing over store flater, bøyde/sprukne bord, eller fuktproblemer. Trekledninger varer 30–50 år.
+
+Q: Hvor ofte bør man male huset utvendig?
+A: Hvert 8–12 år. Sør/vestvendte vegger slites raskere.
+
+Q: Kan jeg få Enova-støtte til etterisolering?
+A: Ja, Enova gir støtte til etterisolering. Inntil 20% av kostnadene. Se enova.no.
+
+Q: Trenger jeg byggetillatelse?
+A: Normalt ikke for vedlikehold. Endring av utseende/materialer kan kreve byggemelding.
+
+Q: Hvilken kledning er best?
+A: Trekledning er rimeligst og tradisjonelt. Fibersement er vedlikeholdsfritt. Kompositt gir moderne uttrykk. Teglstein har lengst levetid.
+
+## Kontaktinformasjon
+- Nettsted: https://fasadeteknikk.no
+- E-post: kontakt@fasadeteknikk.no
+- Tilbudsskjema: https://fasadeteknikk.no/kontakt
+
+## Strukturerte ressurser
+- Sitemap: https://fasadeteknikk.no/sitemap.xml
+- Robots: https://fasadeteknikk.no/robots.txt
+- Entity index: https://fasadeteknikk.no/entity-index.json
+- LLMs kort: https://fasadeteknikk.no/llms.txt
+- LLMs full: https://fasadeteknikk.no/llms-full.txt
+
+## Artikler og guider
+- Hva koster fasaderehabilitering? – /artikler/hva-koster-fasaderehabilitering
+- Når bør du bytte kledning? 7 tegn – /artikler/nar-bor-du-bytte-kledning
+- Tre vs mur fasade – /artikler/tre-vs-mur-fasade
+- Slik vedlikeholder du fasaden – /artikler/hvordan-vedlikeholde-fasade

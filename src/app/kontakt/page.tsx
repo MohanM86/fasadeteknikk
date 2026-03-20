@@ -21,10 +21,10 @@ export default function KontaktSide() {
           <div className="container-site py-10 sm:py-14">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
               <div>
-                <h1 className="font-display font-bold text-display-xl text-slate-900 mb-4 text-balance">Få gratis tilbud fra fasadefirma</h1>
-                <p className="text-body-lg text-slate-600 mb-6">Fyll ut skjemaet og motta uforpliktende tilbud fra kvalifiserte firma i ditt område innen 24 timer.</p>
-                <div className="flex items-center gap-2 text-body-sm text-slate-500">
-                  <Shield className="w-4 h-4 text-forest-600" />Dine opplysninger deles kun med relevante fagfolk.
+                <h1 className="font-display font-extrabold text-display-xl text-neutral-900 mb-4 text-balance">Få gratis tilbud fra fasadefirma</h1>
+                <p className="text-body-lg text-neutral-500 mb-6">Fyll ut skjemaet og motta uforpliktende tilbud fra kvalifiserte firma i ditt område innen 24 timer.</p>
+                <div className="flex items-center gap-2 text-body-sm text-neutral-400">
+                  <Shield className="w-4 h-4 text-brand-500" />Dine opplysninger deles kun med relevante fagfolk.
                 </div>
               </div>
               <LeadForm kilde="kontakt-side" />

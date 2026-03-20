@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { CheckCircle, ChevronRight, Loader2, AlertCircle, Shield } from "lucide-react";
+import { CheckCircle, ArrowRight, Loader2, AlertCircle, Shield } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const TJENESTE_OPTIONS = [
@@ -49,24 +49,24 @@ export default function LeadForm({ kilde, className, defaultTjeneste }: LeadForm
   if (submitted) {
     return (
       <div className={cn("form-surface p-8 text-center animate-fade-in", className)}>
-        <div className="w-16 h-16 rounded-full bg-success-50 border-2 border-success-500 flex items-center justify-center mx-auto mb-5">
-          <CheckCircle className="w-8 h-8 text-success-600" />
+        <div className="w-16 h-16 rounded-full bg-green-50 border-2 border-green-500 flex items-center justify-center mx-auto mb-5">
+          <CheckCircle className="w-8 h-8 text-green-600" />
         </div>
-        <h3 className="font-display font-bold text-heading-lg text-slate-900 mb-2">Forespørsel mottatt!</h3>
-        <p className="text-body-md text-slate-600 max-w-sm mx-auto">Vi kobler deg med kvalifiserte fasadefirma i ditt område. Forvent svar innen 24 timer.</p>
+        <h3 className="font-display font-bold text-heading-lg text-neutral-900 mb-2">Forespørsel mottatt!</h3>
+        <p className="text-body-md text-neutral-500 max-w-sm mx-auto">Vi kobler deg med kvalifiserte fasadefirma i ditt område. Forvent svar innen 24 timer.</p>
       </div>
     );
   }
 
   return (
     <div className={cn("form-surface p-6 sm:p-8", className)}>
-      <div className="flex items-center gap-3 mb-6">
-        <div className="w-10 h-10 rounded-12 bg-forest-900 flex items-center justify-center">
+      <div className="flex items-center gap-3 mb-7">
+        <div className="w-11 h-11 rounded-12 bg-neutral-900 flex items-center justify-center">
           <svg className="w-5 h-5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg>
         </div>
         <div>
-          <h3 className="font-display font-bold text-heading-md text-slate-900">Få gratis tilbud</h3>
-          <p className="text-caption text-slate-500">Uforpliktende, innen 24 timer</p>
+          <h3 className="font-display font-bold text-heading-md text-neutral-900">Få gratis tilbud</h3>
+          <p className="text-xs text-neutral-400">Svar innen 24 timer</p>
         </div>
       </div>
 
@@ -74,7 +74,7 @@ export default function LeadForm({ kilde, className, defaultTjeneste }: LeadForm
         <div>
           <label className="label label-required" htmlFor="lead-tjeneste">Hva trenger du?</label>
           <select id="lead-tjeneste" className="select" value={form.tjeneste} onChange={e => update({ tjeneste: e.target.value })}>
-            <option value="" disabled>Velg tjeneste</option>
+            <option value="" disabled>Velg tjeneste...</option>
             {TJENESTE_OPTIONS.map(o => <option key={o.value} value={o.value}>{o.label}</option>)}
           </select>
         </div>
@@ -100,25 +100,25 @@ export default function LeadForm({ kilde, className, defaultTjeneste }: LeadForm
         <label className="flex items-start gap-3 cursor-pointer group">
           <div className="relative flex-shrink-0 mt-0.5">
             <input type="checkbox" className="sr-only peer" checked={form.samtykke} onChange={e => update({ samtykke: e.target.checked })} />
-            <div className={cn("w-5 h-5 rounded-6 border-2 flex items-center justify-center transition-all", form.samtykke ? "bg-forest-900 border-forest-900" : "border-slate-300 group-hover:border-forest-600")}>
+            <div className={cn("w-5 h-5 rounded-6 border-2 flex items-center justify-center transition-all", form.samtykke ? "bg-brand-500 border-brand-500" : "border-neutral-300 group-hover:border-brand-400")}>
               {form.samtykke && <CheckCircle className="w-3 h-3 text-white" />}
             </div>
           </div>
-          <span className="text-body-sm text-slate-600">Jeg samtykker til at mine opplysninger behandles for å formidle tilbud fra fasadefirma.</span>
+          <span className="text-body-sm text-neutral-500">Jeg samtykker til at mine opplysninger behandles for å formidle tilbud fra fasadefirma.</span>
         </label>
 
         {error && (
-          <div className="flex items-center gap-2 p-3 bg-error-50 border border-error-500/20 rounded-10 text-body-sm text-error-600">
+          <div className="flex items-center gap-2 p-3 bg-red-50 border border-red-200 rounded-10 text-body-sm text-red-600">
             <AlertCircle className="w-4 h-4 flex-shrink-0" />{error}
           </div>
         )}
 
         <button type="button" onClick={handleSubmit} disabled={!canSubmit || loading}
           className={cn("btn-primary w-full justify-center", (!canSubmit || loading) && "opacity-50 cursor-not-allowed shadow-none")}>
-          {loading ? <><Loader2 className="w-4 h-4 animate-spin" />Sender...</> : <>Send forespørsel <ChevronRight className="w-4 h-4" /></>}
+          {loading ? <><Loader2 className="w-4 h-4 animate-spin" />Sender...</> : <>Send forespørsel <ArrowRight className="w-4 h-4" /></>}
         </button>
 
-        <div className="flex items-center justify-center gap-2 text-caption text-slate-400">
+        <div className="flex items-center justify-center gap-2 text-xs text-neutral-400">
           <Shield className="w-3.5 h-3.5" />
           <span>Trygt og uforpliktende. Ingen skjulte kostnader.</span>
         </div>

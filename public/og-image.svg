@@ -1,15 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
-  <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#0f3d2e"/>
-      <stop offset="100%" stop-color="#1a4e38"/>
-    </linearGradient>
-  </defs>
-  <rect width="1200" height="630" fill="url(#bg)"/>
-  <path d="M520 140L600 90l80 50v120h-160z" fill="none" stroke="#f5f2ec" stroke-width="6" stroke-linejoin="round"/>
-  <path d="M570 260v-40h60v40" fill="none" stroke="#f5f2ec" stroke-width="6" stroke-linejoin="round"/>
-  <line x1="480" y1="260" x2="720" y2="260" stroke="#f5f2ec" stroke-width="6"/>
+  <rect width="1200" height="630" fill="#1A1A1A"/>
+  <path d="M520 140L600 90l80 50v120h-160z" fill="none" stroke="#FF6B00" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M570 260v-40h60v40" fill="none" stroke="#FF6B00" stroke-width="6" stroke-linejoin="round"/>
+  <line x1="480" y1="260" x2="720" y2="260" stroke="#FF6B00" stroke-width="6"/>
   <text x="600" y="370" font-family="system-ui,sans-serif" font-size="56" font-weight="800" fill="white" text-anchor="middle">Fasadeteknikk</text>
-  <text x="600" y="430" font-family="system-ui,sans-serif" font-size="24" fill="#88ceaa" text-anchor="middle">Alt om fasade i Norge</text>
-  <text x="600" y="520" font-family="system-ui,sans-serif" font-size="18" fill="#55b384" text-anchor="middle">fasadeteknikk.no</text>
+  <text x="600" y="430" font-family="system-ui,sans-serif" font-size="24" fill="#FF6B00" text-anchor="middle">Alt om fasade i Norge</text>
+  <text x="600" y="520" font-family="system-ui,sans-serif" font-size="18" fill="#666" text-anchor="middle">fasadeteknikk.no</text>
 </svg>

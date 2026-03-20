@@ -15,10 +15,10 @@ export default function StickyMobileCTA() {
 
   return (
     <div className={cn("sticky-cta-bar lg:hidden transition-transform duration-300", visible ? "translate-y-0" : "translate-y-full")}>
-      <a href="tel:+4780000000" className="btn flex-1 justify-center gap-2 text-[0.875rem] bg-forest-900 text-white py-3 rounded-10">
+      <a href="tel:+4780000000" className="btn flex-1 justify-center gap-2 text-sm bg-neutral-900 text-white py-3 rounded-full">
         <Phone className="w-4 h-4" />Ring nå
       </a>
-      <Link href="/kontakt" className="btn-primary flex-1 justify-center gap-2 text-[0.875rem] py-3">
+      <Link href="/kontakt" className="btn-primary flex-1 justify-center gap-2 text-sm py-3">
         <FileText className="w-4 h-4" />Gratis tilbud
       </Link>
     </div>

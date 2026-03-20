@@ -11,15 +11,15 @@ export default function FAQ({ items, tittel, showSchema = true }: { items: FAQIt
   return (
     <section className="w-full">
       {showSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(buildFAQSchema(items)) }} />}
-      {tittel && <h2 className="font-display font-bold text-display-lg text-slate-900 mb-8">{tittel}</h2>}
-      <div className="divide-y divide-sand-300 border-t border-sand-300">
+      {tittel && <h2 className="font-display font-bold text-display-lg text-neutral-900 mb-8">{tittel}</h2>}
+      <div className="divide-y divide-neutral-200 border-t border-neutral-200">
         {items.map((item, idx) => {
           const isOpen = open === idx;
           return (
             <div key={idx}>
               <button type="button" className="faq-trigger" onClick={() => setOpen(isOpen ? null : idx)} aria-expanded={isOpen}>
                 <span className="text-pretty">{item.sporsmal}</span>
-                <ChevronDown className={cn("w-5 h-5 flex-shrink-0 text-slate-400 transition-transform duration-300", isOpen && "rotate-180 text-forest-600")} aria-hidden />
+                <ChevronDown className={cn("w-5 h-5 flex-shrink-0 text-neutral-400 transition-transform duration-300", isOpen && "rotate-180 text-brand-500")} aria-hidden />
               </button>
               <div className={cn("overflow-hidden transition-all duration-300", isOpen ? "max-h-[600px] opacity-100" : "max-h-0 opacity-0")}>
                 <div className="faq-content">{item.svar}</div>
