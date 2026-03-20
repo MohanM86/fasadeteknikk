@@ -2,6 +2,8 @@
   "site": "fasadeteknikk.no",
   "navn": "Fasadeteknikk",
   "type": "ProfessionalServicePlatform",
+  "operatør": "IT-Firma.no",
+  "operatørUrl": "https://it-firma.no",
   "bransje": "Fasade / Kledning / Rehabilitering / Maling / Tak / Taktekking",
   "land": "Norge",
   "sprak": "nb-NO",

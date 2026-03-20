@@ -72,14 +72,7 @@ export const TJENESTER: Tjeneste[] = [
     kortBeskrivelse: "Komplett takskifte med ny taktekking, undertak, isolasjon og beslag. Beskytter boligen i 30–50 år.",
     prisMin: 1500, prisMax: 4000, prisenhet: "per kvm",
     intro: "Å legge nytt tak er en av de viktigste investeringene du gjør i boligen. Et godt tak beskytter hele konstruksjonen mot fukt, vind og temperatursvingninger. Enten du velger takstein, takpapp, stålplater eller skifer, er riktig utførelse avgjørende for levetiden.",
-    fordeler: [
-      "Beskytter hele boligen mot fukt og lekkasjer",
-      "Nytt tak varer 30 til 50 år med riktige materialer",
-      "Mulighet for etterisolering av taket samtidig",
-      "Øker boligens verdi og energimerking",
-      "Reduserer risiko for kostbare vannskader",
-      "Moderne takløsninger gir bedre ventilasjon",
-    ],
+    fordeler: ["Beskytter hele boligen mot fukt og lekkasjer", "Nytt tak varer 30 til 50 år med riktige materialer", "Mulighet for etterisolering av taket samtidig", "Øker boligens verdi og energimerking", "Reduserer risiko for kostbare vannskader", "Moderne takløsninger gir bedre ventilasjon"],
     faq: [
       { sporsmal: "Hva koster det å legge nytt tak?", svar: "Prisen varierer fra 1 500 til 4 000 kr per kvadratmeter avhengig av materialvalg og takkonstruksjon. For en vanlig enebolig med 120 kvm tak ligger totalprisen mellom 180 000 og 480 000 kr inkludert materialer og arbeid." },
       { sporsmal: "Hvilken type taktekking er best?", svar: "Betongtakstein er mest brukt og rimeligst. Stålplater er lette og lekre. Skifer er dyrest men varer lengst (over 100 år). Takpapp brukes mest på flate tak og tilbygg." },
@@ -93,14 +86,7 @@ export const TJENESTER: Tjeneste[] = [
     kortBeskrivelse: "Reparasjon av taklekkasjer, ødelagte takstein, slitt takpapp og andre skader på taket.",
     prisMin: 500, prisMax: 2500, prisenhet: "per kvm",
     intro: "Takreparasjon er ofte nødvendig når det oppstår lekkasjer, takstein har forskjøvet seg, beslag er rustet eller takpapp er slitt. Rask reparasjon forhindrer at små problemer utvikler seg til store og kostbare vannskader i konstruksjonen.",
-    fordeler: [
-      "Stopper lekkasjer og forhindrer vannskader",
-      "Vesentlig rimeligere enn komplett takskifte",
-      "Forlenger levetiden til eksisterende tak",
-      "Rask utførelse, ofte 1 til 3 dager",
-      "Forebygger mugg og råte i takkonstruksjonen",
-      "Beskytter isolasjon og innvendig himling",
-    ],
+    fordeler: ["Stopper lekkasjer og forhindrer vannskader", "Vesentlig rimeligere enn komplett takskifte", "Forlenger levetiden til eksisterende tak", "Rask utførelse, ofte 1 til 3 dager", "Forebygger mugg og råte i takkonstruksjonen", "Beskytter isolasjon og innvendig himling"],
     faq: [
       { sporsmal: "Hva koster takreparasjon?", svar: "Prisen varierer fra 500 til 2 500 kr per kvadratmeter avhengig av skadens omfang. Enkel reparasjon av noen takstein kan koste 5 000 til 15 000 kr, mens større reparasjoner kan koste 50 000 til 150 000 kr." },
       { sporsmal: "Hvordan vet jeg om taket trenger reparasjon?", svar: "Vanlige tegn er fuktflekker i taket innvendig, takstein som har forskjøvet seg, synlige sprekker i takpapp, rust på beslag, mose og algevekst, og is som danner seg langs takrenna om vinteren." },
@@ -114,14 +100,7 @@ export const TJENESTER: Tjeneste[] = [
     kortBeskrivelse: "Montering og utskifting av takrenner, nedløp og beslag. Leder vannet trygt bort fra fasade og grunnmur.",
     prisMin: 300, prisMax: 1200, prisenhet: "per løpemeter",
     intro: "Takrenner og beslag er en kritisk del av boligens vannavledning. Når takrennene fungerer som de skal, ledes regnvann og smeltevann trygt bort fra fasade, grunnmur og fundament. Defekte eller manglende takrenner er en av de vanligste årsakene til fuktskader på norske boliger.",
-    fordeler: [
-      "Beskytter fasade og grunnmur mot vannskader",
-      "Forhindrer frostsprengning i grunnmur",
-      "Moderne aluminium takrenner varer 30+ år",
-      "Forbedrer boligens utseende og helhetsinntrykk",
-      "Kan kombineres med løvfang for minimalt vedlikehold",
-      "Viktig for å opprettholde garantier på fasadearbeid",
-    ],
+    fordeler: ["Beskytter fasade og grunnmur mot vannskader", "Forhindrer frostsprengning i grunnmur", "Moderne aluminium takrenner varer 30+ år", "Forbedrer boligens utseende og helhetsinntrykk", "Kan kombineres med løvfang for minimalt vedlikehold", "Viktig for å opprettholde garantier på fasadearbeid"],
     faq: [
       { sporsmal: "Hva koster nye takrenner?", svar: "Prisen varierer fra 300 til 1 200 kr per løpemeter avhengig av materiale og tilgjengelighet. For en vanlig enebolig med 40 til 60 løpemeter takrenne ligger totalprisen mellom 15 000 og 60 000 kr inkludert montering." },
       { sporsmal: "Hvilken type takrenne er best?", svar: "Aluminium er mest populært og gir best balanse mellom pris, holdbarhet og utseende. Kobber er eksklusivt og varer lengst. Plast er rimeligst men har kortest levetid. Stål med coating er et godt alternativ." },

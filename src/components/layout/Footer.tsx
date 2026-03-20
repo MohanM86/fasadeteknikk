@@ -24,8 +24,10 @@ const BY_LINKS = [
 const INFO_LINKS = [
   { label: "Om oss", href: "/om-oss" },
   { label: "Priser", href: "/priser" },
+  { label: "Artikler", href: "/artikler" },
   { label: "FAQ", href: "/faq" },
   { label: "Kontakt", href: "/kontakt" },
+  { label: "Personvern", href: "/personvern" },
 ];
 
 export default function Footer() {
@@ -68,8 +70,11 @@ export default function Footer() {
       </div>
       <div className="border-t border-neutral-800/50">
         <div className="container-site py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-xs text-neutral-600">&copy; {new Date().getFullYear()} Fasadeteknikk.no. Alle rettigheter forbeholdt.</p>
-          <p className="text-xs text-neutral-700">Kun kvalifiserte og seriøse fagfolk</p>
+          <p className="text-xs text-neutral-600">&copy; {new Date().getFullYear()} Fasadeteknikk.no – En tjeneste fra <a href="https://it-firma.no" className="text-neutral-500 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">IT-Firma.no</a></p>
+          <div className="flex items-center gap-4">
+            <Link href="/personvern" className="text-xs text-neutral-600 hover:text-neutral-400 transition-colors">Personvern</Link>
+            <span className="text-xs text-neutral-700">Kun kvalifiserte og seriøse fagfolk</span>
+          </div>
         </div>
       </div>
     </footer>

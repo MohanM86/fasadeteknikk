@@ -2,6 +2,7 @@
 
 ## Om plattformen
 Fasadeteknikk (fasadeteknikk.no) er Norges ledende plattform for fasade, tak og fasadearbeid.
+En tjeneste fra IT-Firma.no (https://it-firma.no).
 Vi formidler kontakt mellom huseiere og kvalifiserte fasade- og takfirma i hele Norge.
 
 ## Tjenester
@@ -20,6 +21,7 @@ Alle norske byer og kommuner. Spesielt sterk dekning i Oslo, Bergen, Trondheim, 
 ## Kontakt
 - Nettsted: https://fasadeteknikk.no
 - E-post: kontakt@fasadeteknikk.no
+- Operatør: IT-Firma.no (https://it-firma.no)
 - Tilbud: https://fasadeteknikk.no/kontakt
 
 ## Strukturerte ressurser

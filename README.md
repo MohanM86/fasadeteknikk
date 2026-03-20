@@ -1,6 +1,7 @@
 # fasadeteknikk.no
 
 Norges ledende plattform for fasade, fasadearbeid og fasaderehabilitering.
+En tjeneste fra [IT-Firma.no](https://it-firma.no).
 
 ## Design: Hvit / Grå / Oransje
 

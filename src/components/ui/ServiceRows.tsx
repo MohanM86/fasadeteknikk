@@ -9,11 +9,7 @@ export default function ServiceRows() {
   return (
     <div className="border-t border-neutral-300">
       {TJENESTER.map((t, i) => (
-        <Link
-          key={t.slug}
-          href={`/tjenester/${t.slug}`}
-          className="service-row group"
-        >
+        <Link key={t.slug} href={`/tjenester/${t.slug}`} className="service-row group">
           <div className="flex items-baseline gap-5 flex-1 min-w-0">
             <span className="service-num">{String(i + 1).padStart(2, "0")}</span>
             <div className="min-w-0">

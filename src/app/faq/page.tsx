@@ -5,11 +5,7 @@ import StickyMobileCTA from "@/components/layout/StickyMobileCTA";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import FAQ from "@/components/ui/FAQ";
 
-export const metadata: Metadata = {
-  title: "Vanlige spørsmål om fasade og fasadearbeid",
-  description: "Svar på de vanligste spørsmålene om fasaderehabilitering, kledning, maling, priser og vedlikehold.",
-  alternates: { canonical: "https://fasadeteknikk.no/faq" },
-};
+export const metadata: Metadata = { title: "Vanlige spørsmål om fasade og fasadearbeid", description: "Svar på de vanligste spørsmålene om fasaderehabilitering, kledning, maling, priser og vedlikehold.", alternates: { canonical: "https://fasadeteknikk.no/faq" } };
 
 const FAQ_ITEMS = [
   { sporsmal: "Hva koster det å rehabilitere fasaden?", svar: "Prisen varierer fra 1 500 til 4 500 kr per kvadratmeter avhengig av tilstand, materialvalg og omfang. For en enebolig med 150 kvm fasade blir totalprisen typisk mellom 225 000 og 675 000 kr." },
@@ -24,22 +20,10 @@ const FAQ_ITEMS = [
 
 export default function FAQSide() {
   return (
-    <>
-      <Header />
-      <main>
-        <div className="container-site pt-5 pb-2"><Breadcrumb items={[{ navn: "FAQ" }]} /></div>
-        <section className="hero-pattern">
-          <div className="container-site py-10 text-center">
-            <h1 className="font-display font-extrabold text-display-xl text-neutral-900 mb-4 text-balance">Vanlige spørsmål om fasade</h1>
-            <p className="text-body-lg text-neutral-500 max-w-2xl mx-auto">Svar på de mest stilte spørsmålene om fasadearbeid, priser og vedlikehold.</p>
-          </div>
-        </section>
-        <section className="section-white section-py-sm">
-          <div className="container-site max-w-3xl"><FAQ items={FAQ_ITEMS} /></div>
-        </section>
-      </main>
-      <Footer />
-      <StickyMobileCTA />
-    </>
+    <><Header /><main>
+      <div className="container-site pt-5 pb-2"><Breadcrumb items={[{ navn: "FAQ" }]} /></div>
+      <section className="hero-pattern"><div className="container-site py-10 text-center"><h1 className="font-display font-extrabold text-display-xl text-neutral-900 mb-4 text-balance">Vanlige spørsmål om fasade</h1><p className="text-body-lg text-neutral-500 max-w-2xl mx-auto">Svar på de mest stilte spørsmålene om fasadearbeid, priser og vedlikehold.</p></div></section>
+      <section className="section-white section-py-sm"><div className="container-site max-w-3xl"><FAQ items={FAQ_ITEMS} /></div></section>
+    </main><Footer /><StickyMobileCTA /></>
   );
 }

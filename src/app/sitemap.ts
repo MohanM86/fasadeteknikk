@@ -12,7 +12,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/priser`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
     { url: `${BASE}/kontakt`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE}/faq`, lastModified: now, changeFrequency: "weekly", priority: 0.7 },
+    { url: `${BASE}/artikler`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
     { url: `${BASE}/om-oss`, lastModified: now, changeFrequency: "monthly", priority: 0.5 },
+    { url: `${BASE}/personvern`, lastModified: now, changeFrequency: "yearly", priority: 0.3 },
   ];
   const tjenesterPages: MetadataRoute.Sitemap = TJENESTER.map(t => ({ url: `${BASE}/tjenester/${t.slug}`, lastModified: now, changeFrequency: "monthly", priority: 0.9 }));
   const byPages: MetadataRoute.Sitemap = BYER.map(b => ({ url: `${BASE}/by/${b.slug}`, lastModified: now, changeFrequency: "monthly", priority: 0.8 }));

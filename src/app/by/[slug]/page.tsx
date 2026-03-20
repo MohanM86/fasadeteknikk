@@ -32,62 +32,22 @@ export default function BySide({ params }: Props) {
   ];
 
   return (
-    <>
-      <Header />
-      <main>
-        <div className="container-site pt-5 pb-2"><Breadcrumb items={[{ navn: "Byer", href: "/by/oslo" }, { navn: `Fasade ${by.navn}` }]} /></div>
-        <section className="hero-pattern" aria-labelledby="by-h">
-          <div className="container-site py-10 sm:py-14">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
-              <div>
-                <div className="badge-brand mb-3"><MapPin className="w-3 h-3" />{by.fylke}</div>
-                <h1 id="by-h" className="font-display font-extrabold text-display-xl text-neutral-900 mb-4 text-balance">Fasade i <span className="text-brand-500">{by.navn}</span></h1>
-                <p className="text-body-lg text-neutral-500 mb-5">{by.langTekst}</p>
-                <div className="flex flex-wrap gap-2 mb-5">
-                  {[{ i: Shield, t: "Kvalifiserte firma" }, { i: Clock, t: "Svar innen 24t" }, { i: Star, t: "Gratis tilbud" }].map(({ i: Icon, t }) => (
-                    <div key={t} className="flex items-center gap-1.5 badge-neutral text-body-sm"><Icon className="w-3.5 h-3.5" />{t}</div>
-                  ))}
-                </div>
-                <Link href="#tilbud" className="btn-primary">Få gratis tilbud i {by.navn} <ArrowRight className="w-4 h-4" /></Link>
-              </div>
-              <div id="tilbud"><LeadForm kilde={`by-${by.slug}`} /></div>
-            </div>
-          </div>
-        </section>
-        <section className="section-light section-py-sm">
-          <div className="container-site">
-            <h2 className="font-display font-bold text-heading-xl text-neutral-900 mb-5">Tjenester i {by.navn}</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-              {TJENESTER.map(t => (
-                <Link key={t.slug} href={`/tjenester/${t.slug}`} className="card-flat p-4 group">
-                  <div className="font-display font-semibold text-body-sm text-neutral-900 group-hover:text-brand-500 mb-1">{t.kortTittel}</div>
-                  <div className="text-caption text-neutral-400">{formatPrisIntervall(t.prisMin, t.prisMax)} {t.prisenhet}</div>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </section>
-        <section className="section-white section-py-sm">
-          <div className="container-site max-w-3xl"><FAQ items={faqItems} tittel={`Vanlige spørsmål om fasade i ${by.navn}`} /></div>
-        </section>
-        <section className="section-light section-py-sm">
-          <div className="container-site">
-            <h2 className="font-display font-bold text-heading-xl text-neutral-900 mb-4">Fasade i andre byer</h2>
-            <div className="flex flex-wrap gap-2">
-              {andreByer.map(b => (<Link key={b.slug} href={`/by/${b.slug}`} className="badge-neutral hover:bg-brand-50 hover:text-brand-500 hover:border-brand-200 transition-colors">{b.navn}</Link>))}
-            </div>
-          </div>
-        </section>
-        <section className="section-py-sm">
-          <div className="container-site"><div className="cta-block text-center relative z-10">
-            <h2 className="font-display font-extrabold text-display-lg text-white mb-3">Finn fasadefirma i {by.navn}</h2>
-            <p className="text-base text-neutral-500 mb-6">Gratis og uforpliktende tilbud fra lokale fagfolk.</p>
-            <Link href="#tilbud" className="btn-primary">Få gratis tilbud <ArrowRight className="w-4 h-4" /></Link>
-          </div></div>
-        </section>
-      </main>
-      <Footer />
-      <StickyMobileCTA />
-    </>
+    <><Header /><main>
+      <div className="container-site pt-5 pb-2"><Breadcrumb items={[{ navn: "Byer", href: "/by/oslo" }, { navn: `Fasade ${by.navn}` }]} /></div>
+      <section className="hero-pattern" aria-labelledby="by-h"><div className="container-site py-10 sm:py-14"><div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+        <div>
+          <div className="badge-brand mb-3"><MapPin className="w-3 h-3" />{by.fylke}</div>
+          <h1 id="by-h" className="font-display font-extrabold text-display-xl text-neutral-900 mb-4 text-balance">Fasade i <span className="text-brand-500">{by.navn}</span></h1>
+          <p className="text-body-lg text-neutral-500 mb-5">{by.langTekst}</p>
+          <div className="flex flex-wrap gap-2 mb-5">{[{ i: Shield, t: "Kvalifiserte firma" }, { i: Clock, t: "Svar innen 24t" }, { i: Star, t: "Gratis tilbud" }].map(({ i: Icon, t }) => (<div key={t} className="flex items-center gap-1.5 badge-neutral text-body-sm"><Icon className="w-3.5 h-3.5" />{t}</div>))}</div>
+          <Link href="#tilbud" className="btn-primary">Få gratis tilbud i {by.navn} <ArrowRight className="w-4 h-4" /></Link>
+        </div>
+        <div id="tilbud"><LeadForm kilde={`by-${by.slug}`} /></div>
+      </div></div></section>
+      <section className="section-light section-py-sm"><div className="container-site"><h2 className="font-display font-bold text-heading-xl text-neutral-900 mb-5">Tjenester i {by.navn}</h2><div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">{TJENESTER.map(t => (<Link key={t.slug} href={`/tjenester/${t.slug}`} className="card-flat p-4 group"><div className="font-display font-semibold text-body-sm text-neutral-900 group-hover:text-brand-500 mb-1">{t.kortTittel}</div><div className="text-caption text-neutral-400">{formatPrisIntervall(t.prisMin, t.prisMax)} {t.prisenhet}</div></Link>))}</div></div></section>
+      <section className="section-white section-py-sm"><div className="container-site max-w-3xl"><FAQ items={faqItems} tittel={`Vanlige spørsmål om fasade i ${by.navn}`} /></div></section>
+      <section className="section-light section-py-sm"><div className="container-site"><h2 className="font-display font-bold text-heading-xl text-neutral-900 mb-4">Fasade i andre byer</h2><div className="flex flex-wrap gap-2">{andreByer.map(b => (<Link key={b.slug} href={`/by/${b.slug}`} className="badge-neutral hover:bg-brand-50 hover:text-brand-500 hover:border-brand-200 transition-colors">{b.navn}</Link>))}</div></div></section>
+      <section className="section-py-sm"><div className="container-site"><div className="cta-block text-center relative z-10"><h2 className="font-display font-extrabold text-display-lg text-white mb-3">Finn fasadefirma i {by.navn}</h2><p className="text-base text-neutral-500 mb-6">Gratis og uforpliktende tilbud fra lokale fagfolk.</p><Link href="#tilbud" className="btn-primary">Få gratis tilbud <ArrowRight className="w-4 h-4" /></Link></div></div></section>
+    </main><Footer /><StickyMobileCTA /></>
   );
 }
