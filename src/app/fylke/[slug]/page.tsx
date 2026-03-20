@@ -6,6 +6,7 @@ import {
   Paintbrush, Layers, Thermometer, Droplets, Wrench,
   BrickWall, TreePine, Building, Blocks, Glasses,
   Snowflake, CloudRain, Leaf, Mountain, Sparkles,
+  AlertTriangle, DollarSign,
 } from "lucide-react";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
