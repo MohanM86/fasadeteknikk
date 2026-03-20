@@ -1,10 +1,8 @@
 "use client";
-
 import Link from "next/link";
 import { FileText } from "lucide-react";
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
-
 export default function StickyMobileCTA() {
   const [visible, setVisible] = useState(false);
   useEffect(() => {
@@ -12,7 +10,6 @@ export default function StickyMobileCTA() {
     window.addEventListener("scroll", h, { passive: true });
     return () => window.removeEventListener("scroll", h);
   }, []);
-
   return (
     <div className={cn("sticky-cta-bar lg:hidden transition-transform duration-300", visible ? "translate-y-0" : "translate-y-full")}>
       <Link href="/kontakt" className="btn-primary flex-1 justify-center gap-2 text-sm py-3">

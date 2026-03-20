@@ -6,17 +6,13 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://fasadeteknikk.no"),
   title: { default: "Fasadeteknikk – Alt om fasade i Norge", template: "%s | Fasadeteknikk.no" },
   description: "Norges ledende plattform for fasade og fasadearbeid. Finn kvalifiserte firma for fasade, tak, kledning, maling og etterisolering. Gratis tilbud.",
-  keywords: ["fasade", "fasadeteknikk", "fasaderehabilitering", "bytte kledning", "male hus utvendig", "etterisolering fasade", "vaske fasade", "kledning hus", "fasade pris", "fasadefirma", "legge nytt tak", "takreparasjon", "takrenner", "taktekking pris", "takfirma"],
+  keywords: ["fasade","fasadeteknikk","fasaderehabilitering","bytte kledning","male hus utvendig","etterisolering fasade","vaske fasade","kledning hus","fasade pris","fasadefirma","legge nytt tak","takreparasjon","takrenner","taktekking pris","takfirma","fasade kommune","fasade fylke"],
   authors: [{ name: "Fasadeteknikk", url: "https://fasadeteknikk.no" }],
-  creator: "Fasadeteknikk",
-  publisher: "Fasadeteknikk",
-  robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 } },
-  openGraph: { type: "website", locale: "nb_NO", url: "https://fasadeteknikk.no", siteName: "Fasadeteknikk", title: "Fasadeteknikk – Alt om fasade i Norge", description: "Norges ledende plattform for fasade, tak og fasadearbeid. Gratis tilbud fra kvalifiserte firma.", images: [{ url: "/og-image.svg", width: 1200, height: 630, alt: "Fasadeteknikk – Alt om fasade i Norge" }] },
-  twitter: { card: "summary_large_image", title: "Fasadeteknikk – Alt om fasade i Norge", description: "Norges ledende plattform for fasade, tak og fasadearbeid. Gratis tilbud fra kvalifiserte firma.", images: ["/og-image.svg"] },
-  icons: { icon: [{ url: "/favicon.ico", sizes: "any" }, { url: "/icon.svg", type: "image/svg+xml" }, { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" }, { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" }], apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }] },
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1 } },
+  openGraph: { type: "website", locale: "nb_NO", url: "https://fasadeteknikk.no", siteName: "Fasadeteknikk", title: "Fasadeteknikk – Alt om fasade i Norge", description: "Norges ledende plattform for fasade, tak og fasadearbeid. Gratis tilbud fra kvalifiserte firma.", images: [{ url: "/og-image.svg", width: 1200, height: 630, alt: "Fasadeteknikk" }] },
+  icons: { icon: [{ url: "/favicon.ico", sizes: "any" }, { url: "/icon.svg", type: "image/svg+xml" }], apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }] },
   manifest: "/manifest.webmanifest",
   alternates: { canonical: "https://fasadeteknikk.no" },
-  category: "business",
 };
 
 export const viewport: Viewport = {

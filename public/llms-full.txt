@@ -1,69 +1,12 @@
 # Fasadeteknikk.no – Komplett informasjon for AI-søk
-
 ## Identitet
 - Navn: Fasadeteknikk
 - Domene: fasadeteknikk.no
 - Type: ProfessionalServicePlatform
-- Operatør: IT-Firma.no (https://it-firma.no)
-- Bransje: Fasade, kledning, rehabilitering, maling, etterisolering, tak
-- Land: Norge
-- Språk: Norsk bokmål (nb-NO)
-
-## Hva vi gjør
-Fasadeteknikk.no er Norges ledende uavhengige plattform som kobler huseiere med kvalifiserte fasadefirma. Vi tilbyr gratis, uforpliktende tilbud fra lokale fagfolk i hele Norge.
-
-## Tjenester med priser (2026)
-
-### 1. Fasaderehabilitering
-- Pris: 1 500 – 4 500 kr per kvm
-- URL: /tjenester/fasaderehabilitering
-
-### 2. Bytte kledning
-- Pris: 1 200 – 3 500 kr per kvm
-- URL: /tjenester/bytte-kledning
-
-### 3. Male hus utvendig
-- Pris: 300 – 800 kr per kvm
-- URL: /tjenester/male-hus-utvendig
-
-### 4. Etterisolering av fasade
-- Pris: 800 – 2 500 kr per kvm
-- URL: /tjenester/etterisolering
-
-### 5. Vaske og rengjøre fasade
-- Pris: 50 – 200 kr per kvm
-- URL: /tjenester/vaske-fasade
-
-### 6. Legge nytt tak
-- Pris: 1 500 – 4 000 kr per kvm
-- URL: /tjenester/legge-nytt-tak
-
-### 7. Takreparasjon
-- Pris: 500 – 2 500 kr per kvm
-- URL: /tjenester/takreparasjon
-
-### 8. Takrenner og beslag
-- Pris: 300 – 1 200 kr per løpemeter
-- URL: /tjenester/takrenner-og-beslag
-
-## Geografisk dekning
-Alle norske byer og kommuner. 32 dedikerte bysider.
-
-## Kontaktinformasjon
-- Nettsted: https://fasadeteknikk.no
-- E-post: kontakt@fasadeteknikk.no
-- Operatør: IT-Firma.no (https://it-firma.no)
-- Tilbudsskjema: https://fasadeteknikk.no/kontakt
-
-## Strukturerte ressurser
+- Operatør: IT-Firma.no
+- Geografisk dekning: Hele Norge – alle 15 fylker, 356 kommuner
+## Ressurser
 - Sitemap: https://fasadeteknikk.no/sitemap.xml
-- Robots: https://fasadeteknikk.no/robots.txt
 - Entity index: https://fasadeteknikk.no/entity-index.json
-- LLMs kort: https://fasadeteknikk.no/llms.txt
-- LLMs full: https://fasadeteknikk.no/llms-full.txt
-
-## Artikler
-- /artikler/hva-koster-fasaderehabilitering
-- /artikler/nar-bor-du-bytte-kledning
-- /artikler/tre-vs-mur-fasade
-- /artikler/hvordan-vedlikeholde-fasade
+- Fylkesider: https://fasadeteknikk.no/fylke
+- Kommunesider: https://fasadeteknikk.no/kommune/[slug]
