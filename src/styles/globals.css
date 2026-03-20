@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+  body { font-family: 'Outfit', system-ui, sans-serif; color: #1A1A1A; background: #FAFAFA; font-size: 1rem; line-height: 1.65; }
+  h1,h2,h3,h4,h5,h6 { font-family: 'Outfit', system-ui, sans-serif; font-weight: 700; color: #1A1A1A; line-height: 1.1; letter-spacing: -0.03em; }
+  ::selection { background: rgba(255,107,0,0.12); color: #1A1A1A; }
+  :focus-visible { outline: 2px solid #FF6B00; outline-offset: 3px; border-radius: 4px; }
+}
+
+@layer components {
+  .container-site { @apply w-full mx-auto px-5 sm:px-6 lg:px-12; max-width: 1280px; }
+  .section-py { padding-top: clamp(4rem,8vw,7rem); padding-bottom: clamp(4rem,8vw,7rem); }
+  .section-py-sm { padding-top: clamp(2.5rem,5vw,5rem); padding-bottom: clamp(2.5rem,5vw,5rem); }
+  .section-light { background: #FAFAFA; }
+  .section-white { background: #FFFFFF; }
+  .section-dark { background: #1A1A1A; color: white; }
+  .btn { @apply inline-flex items-center justify-center gap-2 font-sans font-semibold transition-all duration-200 ease-out cursor-pointer select-none whitespace-nowrap outline-none; letter-spacing: -0.01em; }
+  .btn-primary { @apply btn text-white text-cta-md; padding: 14px 28px; background: #FF6B00; border-radius: 99px; box-shadow: 0 12px 36px -6px rgba(255,107,0,0.4); }
+  .btn-primary:hover { background: #E05E00; box-shadow: 0 16px 44px -6px rgba(255,107,0,0.5); transform: translateY(-1px); }
+  .btn-secondary { @apply btn text-cta-md; padding: 14px 28px; border: 2px solid #1A1A1A; color: #1A1A1A; background: transparent; border-radius: 99px; }
+  .btn-secondary:hover { background: #1A1A1A; color: white; transform: translateY(-1px); }
+  .card { @apply bg-white border border-neutral-200; border-radius: 20px; box-shadow: 0 4px 24px -4px rgba(0,0,0,0.04); transition: box-shadow 0.25s, transform 0.25s, border-color 0.25s; }
+  .card:hover { box-shadow: 0 12px 40px -8px rgba(0,0,0,0.08); transform: translateY(-2px); border-color: #FF6B00; }
+  .card-flat { @apply bg-white border border-neutral-200; border-radius: 14px; transition: all 0.2s; }
+  .card-flat:hover { border-color: #FF6B00; background: rgba(255,107,0,0.02); }
+  .input { @apply w-full font-sans text-body-md bg-neutral-50 border-2 border-neutral-200 px-4 py-3.5 text-neutral-900 placeholder:text-neutral-400; border-radius: 12px; transition: border-color 0.15s, box-shadow 0.15s; }
+  .input:focus { @apply outline-none; border-color: #FF6B00; box-shadow: 0 0 0 3px rgba(255,107,0,0.08); background: white; }
+  .select { @apply input appearance-none cursor-pointer pr-10; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23999' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; }
+  .label { @apply block text-neutral-500 mb-1.5 font-sans; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; }
+  .label-required::after { content: " *"; color: #FF6B00; }
+  .badge { @apply inline-flex items-center gap-2 font-sans rounded-full; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; padding: 6px 16px; }
+  .badge-brand { @apply badge; background: rgba(255,107,0,0.06); border: 1px solid rgba(255,107,0,0.15); color: #FF6B00; }
+  .badge-neutral { @apply badge; background: #F5F5F5; border: 1px solid #E5E5E5; color: #777; }
+  .section-label { font-size: 0.75rem; font-weight: 600; color: #FF6B00; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 12px; }
+  .service-row { @apply flex items-center justify-between cursor-pointer; padding: 28px 0; border-bottom: 1px solid #E5E5E5; transition: all 0.4s cubic-bezier(0.16,1,0.3,1); }
+  .service-row:hover { background: #FF6B00; margin: 0 -48px; padding: 28px 48px; }
+  .service-row:hover .service-num { color: rgba(255,255,255,0.6); }
+  .service-row:hover .service-name { color: white; }
+  .service-row:hover .service-price { color: rgba(255,255,255,0.8); }
+  .service-row:hover .service-desc { max-height: 30px; opacity: 1; color: rgba(255,255,255,0.75); }
+  .service-row:hover .service-arrow { border-color: white; background: white; }
+  .service-row:hover .service-arrow svg { stroke: #FF6B00; }
+  .service-num { @apply text-sm font-normal text-neutral-400 min-w-[28px]; transition: color 0.3s; }
+  .service-name { @apply font-display text-service-title text-neutral-900; transition: color 0.3s; }
+  .service-price { @apply text-body-sm font-medium text-neutral-500 whitespace-nowrap; transition: color 0.3s; }
+  .service-desc { @apply text-sm text-neutral-500; max-height: 0; opacity: 0; overflow: hidden; transition: all 0.3s; margin-top: 4px; }
+  .service-arrow { @apply flex items-center justify-center flex-shrink-0; width: 44px; height: 44px; border-radius: 99px; border: 2px solid #DDD; transition: all 0.3s; }
+  .cta-block { border-radius: 28px; padding: clamp(2.5rem,5vw,4.5rem); background: #1A1A1A; position: relative; overflow: hidden; }
+  .cta-block::before { content: ''; position: absolute; top: -80px; right: -80px; width: 300px; height: 300px; border-radius: 50%; background: rgba(255,107,0,0.08); }
+  .hero-pattern { background-image: radial-gradient(ellipse at 15% 60%, rgba(255,107,0,0.04) 0%, transparent 50%), radial-gradient(ellipse at 85% 25%, rgba(255,107,0,0.02) 0%, transparent 40%); }
+  .breadcrumb { @apply flex items-center gap-2 text-caption text-neutral-400 flex-wrap; }
+  .breadcrumb a { @apply hover:text-brand-500 transition-colors; }
+  .faq-trigger { @apply flex w-full items-center justify-between gap-4 py-6 text-heading-sm text-neutral-900 hover:text-brand-500 transition-colors duration-200 text-left font-display; }
+  .faq-content { @apply pb-6 text-body-md text-neutral-600 leading-relaxed; }
+  .form-surface { @apply bg-white border border-neutral-200; border-radius: 24px; box-shadow: 0 20px 60px -12px rgba(0,0,0,0.06); }
+  .sticky-cta-bar { @apply fixed bottom-0 left-0 right-0 z-40 bg-white border-t border-neutral-200 px-4 py-3 flex gap-3; box-shadow: 0 -4px 24px -4px rgba(0,0,0,0.06); }
+}
+
+@layer utilities {
+  .text-balance { text-wrap: balance; }
+  .text-pretty { text-wrap: pretty; }
+  .clamp-2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .clamp-3 { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+}
