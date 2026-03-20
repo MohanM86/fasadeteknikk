@@ -50,15 +50,47 @@ export default function Header() {
             </Link>
             <nav className="hidden lg:flex items-center gap-1">
               {NAV.map(item => (
-                <div key={item.label} className="relative" onMouseEnter={() => item.children && setDropdown(item.label)} onMouseLeave={() => setDropdown(null)}>
-                  <Link href={item.href} className="flex items-center gap-1 px-4 py-2 rounded-8 text-sm font-medium text-neutral-600 hover:text-neutral-900 hover:bg-neutral-100 transition-colors">
+                <div
+                  key={item.label}
+                  className="relative"
+                  onMouseEnter={() => item.children && setDropdown(item.label)}
+                  onMouseLeave={() => setDropdown(null)}
+                >
+                  <Link
+                    href={item.href}
+                    className="flex items-center gap-1 px-4 py-2 rounded-8 text-sm font-medium text-neutral-600 hover:text-neutral-900 hover:bg-neutral-100 transition-colors"
+                  >
                     {item.label}
                     {item.children && <ChevronDown className={cn("w-3.5 h-3.5 transition-transform", dropdown === item.label && "rotate-180")} />}
                   </Link>
                   {item.children && (
-                    <div className={cn("absolute top-full left-1/2 -translate-x-1/2 mt-2 w-64 bg-white rounded-16 border border-neutral-200 shadow-card-lg py-2 z-50 transition-all duration-200 origin-top", dropdown === item.label ? "opacity-100 scale-100 pointer-events-auto" : "opacity-0 scale-95 pointer-events-none")}>
-                      {item.children.map(child => (<Link key={child.href} href={child.href} className="flex items-center px-4 py-2.5 text-sm text-neutral-600 hover:bg-neutral-50 hover:text-brand-500 transition-colors rounded-8 mx-1">{child.label}</Link>))}
-                    </div>
+                    <>
+                      {/* Invisible bridge to connect trigger to dropdown panel */}
+                      <div
+                        className={cn(
+                          "absolute top-full left-0 right-0 h-3",
+                          dropdown === item.label ? "block" : "hidden"
+                        )}
+                      />
+                      <div
+                        className={cn(
+                          "absolute top-[calc(100%+12px)] left-1/2 -translate-x-1/2 w-64 bg-white rounded-16 border border-neutral-200 shadow-card-lg py-2 z-50 transition-all duration-200 origin-top",
+                          dropdown === item.label
+                            ? "opacity-100 scale-100 pointer-events-auto"
+                            : "opacity-0 scale-95 pointer-events-none"
+                        )}
+                      >
+                        {item.children.map(child => (
+                          <Link
+                            key={child.href}
+                            href={child.href}
+                            className="flex items-center px-4 py-2.5 text-sm text-neutral-600 hover:bg-neutral-50 hover:text-brand-500 transition-colors rounded-8 mx-1"
+                          >
+                            {child.label}
+                          </Link>
+                        ))}
+                      </div>
+                    </>
                   )}
                 </div>
               ))}
