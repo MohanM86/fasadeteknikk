@@ -8,8 +8,8 @@ export const metadata: Metadata = {
     default: "Fasadeteknikk – Alt om fasade i Norge",
     template: "%s | Fasadeteknikk.no",
   },
-  description: "Norges ledende plattform for fasade og fasadearbeid. Finn kvalifiserte firma for rehabilitering, kledning, maling og etterisolering. Gratis tilbud.",
-  keywords: ["fasade", "fasadeteknikk", "fasaderehabilitering", "bytte kledning", "male hus utvendig", "etterisolering fasade", "vaske fasade", "kledning hus", "fasade pris", "fasadefirma"],
+  description: "Norges ledende plattform for fasade og fasadearbeid. Finn kvalifiserte firma for fasade, tak, kledning, maling og etterisolering. Gratis tilbud.",
+  keywords: ["fasade", "fasadeteknikk", "fasaderehabilitering", "bytte kledning", "male hus utvendig", "etterisolering fasade", "vaske fasade", "kledning hus", "fasade pris", "fasadefirma", "legge nytt tak", "takreparasjon", "takrenner", "taktekking pris", "takfirma"],
   authors: [{ name: "Fasadeteknikk", url: "https://fasadeteknikk.no" }],
   creator: "Fasadeteknikk",
   publisher: "Fasadeteknikk",
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     url: "https://fasadeteknikk.no",
     siteName: "Fasadeteknikk",
     title: "Fasadeteknikk – Alt om fasade i Norge",
-    description: "Norges ledende plattform for fasade og fasadearbeid. Gratis tilbud fra kvalifiserte firma.",
+    description: "Norges ledende plattform for fasade, tak og fasadearbeid. Gratis tilbud fra kvalifiserte firma.",
     images: [
       { url: "/og-image.jpg", width: 1200, height: 630, alt: "Fasadeteknikk – Alt om fasade i Norge", type: "image/jpeg" },
       { url: "/og-image.png", width: 1200, height: 630, alt: "Fasadeteknikk – Alt om fasade i Norge", type: "image/png" },
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Fasadeteknikk – Alt om fasade i Norge",
-    description: "Norges ledende plattform for fasade og fasadearbeid. Gratis tilbud fra kvalifiserte firma.",
+    description: "Norges ledende plattform for fasade, tak og fasadearbeid. Gratis tilbud fra kvalifiserte firma.",
     images: ["/og-image.jpg"],
   },
   icons: {

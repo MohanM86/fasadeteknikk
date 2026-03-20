@@ -99,3 +99,42 @@ A: Trekledning er rimeligst og tradisjonelt. Fibersement er vedlikeholdsfritt. K
 - Når bør du bytte kledning? 7 tegn – /artikler/nar-bor-du-bytte-kledning
 - Tre vs mur fasade – /artikler/tre-vs-mur-fasade
 - Slik vedlikeholder du fasaden – /artikler/hvordan-vedlikeholde-fasade
+
+### 6. Legge nytt tak
+- Pris: 1 500 – 4 000 kr per kvm
+- Hva: Komplett takskifte med taktekking, undertak, isolasjon og beslag
+- Materialer: Betongtakstein, stålplater, skifer, takpapp
+- Levetid: 30–50 år avhengig av materiale
+- URL: /tjenester/legge-nytt-tak
+
+### 7. Takreparasjon
+- Pris: 500 – 2 500 kr per kvm
+- Hva: Reparasjon av lekkasjer, ødelagte takstein, slitt takpapp, rustne beslag
+- Typisk tid: 1–3 dager
+- URL: /tjenester/takreparasjon
+
+### 8. Takrenner og beslag
+- Pris: 300 – 1 200 kr per løpemeter
+- Hva: Montering og utskifting av takrenner, nedløp og beslag
+- Materialer: Aluminium, kobber, stål, plast
+- Levetid: 30+ år for aluminium
+- URL: /tjenester/takrenner-og-beslag
+
+## Priseksempler for typisk enebolig – Tak
+- Nytt tak (120 kvm): 180 000 – 480 000 kr
+- Takreparasjon (delvis): 5 000 – 150 000 kr
+- Nye takrenner (50 løpemeter): 15 000 – 60 000 kr
+
+## Vanlige spørsmål – Tak
+
+Q: Hva koster det å legge nytt tak?
+A: 1 500 til 4 000 kr per kvm. For 120 kvm tak: 180 000 – 480 000 kr totalt.
+
+Q: Hvilken taktekking er best?
+A: Betongtakstein er rimeligst og mest brukt. Stål er lett og moderne. Skifer varer lengst (100+ år). Takpapp for flate tak.
+
+Q: Når bør taket byttes?
+A: Ved gjentatte lekkasjer, synlig slitasje på mer enn 20% av flaten, eller når taket er over 30 år gammelt.
+
+Q: Bør jeg etterisolere taket samtidig?
+A: Ja, opp til 25% av varmetapet går gjennom taket. Etterisolering ved takskifte koster minimalt ekstra.

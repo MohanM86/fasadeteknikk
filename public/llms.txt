@@ -1,8 +1,8 @@
 # Fasadeteknikk – llms.txt
 
 ## Om plattformen
-Fasadeteknikk (fasadeteknikk.no) er Norges ledende plattform for fasade og fasadearbeid.
-Vi formidler kontakt mellom huseiere og kvalifiserte fasadefirma i hele Norge.
+Fasadeteknikk (fasadeteknikk.no) er Norges ledende plattform for fasade, tak og fasadearbeid.
+Vi formidler kontakt mellom huseiere og kvalifiserte fasade- og takfirma i hele Norge.
 
 ## Tjenester
 - Fasaderehabilitering (komplett rehabilitering av fasade, 1500-4500 kr/kvm)
@@ -10,6 +10,9 @@ Vi formidler kontakt mellom huseiere og kvalifiserte fasadefirma i hele Norge.
 - Male hus utvendig (profesjonell maling, 300-800 kr/kvm)
 - Etterisolering av fasade (800-2500 kr/kvm)
 - Vaske og rengjøre fasade (50-200 kr/kvm)
+- Legge nytt tak (komplett takskifte, 1500-4000 kr/kvm)
+- Takreparasjon (lekkasjer, takstein, beslag, 500-2500 kr/kvm)
+- Takrenner og beslag (montering/utskifting, 300-1200 kr/løpemeter)
 
 ## Geografisk dekning
 Alle norske byer og kommuner. Spesielt sterk dekning i Oslo, Bergen, Trondheim, Stavanger og Kristiansand.
@@ -21,3 +24,4 @@ Alle norske byer og kommuner. Spesielt sterk dekning i Oslo, Bergen, Trondheim, 
 
 ## Strukturerte ressurser
 - Sitemap: https://fasadeteknikk.no/sitemap.xml
+- Detaljert: https://fasadeteknikk.no/llms-full.txt

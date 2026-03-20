@@ -46,7 +46,7 @@ export function buildOrgSchema() {
     url: "https://fasadeteknikk.no",
     description: "Norges ledende plattform for fasade og fasadearbeid. Finn kvalifiserte fasadefirma i din kommune.",
     areaServed: { "@type": "Country", name: "Norway" },
-    serviceType: ["Fasaderehabilitering", "Kledning", "Maling", "Etterisolering", "Fasadevask"],
+    serviceType: ["Fasaderehabilitering", "Kledning", "Maling", "Etterisolering", "Fasadevask", "Taktekking", "Takreparasjon", "Takrenner"],
     "@id": "https://fasadeteknikk.no/#organization",
   };
 }

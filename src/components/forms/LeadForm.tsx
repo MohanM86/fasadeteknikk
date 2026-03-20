@@ -10,6 +10,9 @@ const TJENESTE_OPTIONS = [
   { value: "male-hus", label: "Male hus utvendig" },
   { value: "etterisolering", label: "Etterisolering" },
   { value: "vaske-fasade", label: "Vaske fasade" },
+  { value: "legge-nytt-tak", label: "Legge nytt tak" },
+  { value: "takreparasjon", label: "Takreparasjon" },
+  { value: "takrenner-beslag", label: "Takrenner og beslag" },
   { value: "annet", label: "Annet" },
 ];
 

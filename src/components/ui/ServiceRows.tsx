@@ -5,8 +5,6 @@ import { ArrowUpRight } from "lucide-react";
 import { TJENESTER } from "@/data/tjenester";
 import { formatPrisIntervall } from "@/lib/utils";
 
-const NUMS = ["01", "02", "03", "04", "05"];
-
 export default function ServiceRows() {
   return (
     <div className="border-t border-neutral-300">
@@ -17,7 +15,7 @@ export default function ServiceRows() {
           className="service-row group"
         >
           <div className="flex items-baseline gap-5 flex-1 min-w-0">
-            <span className="service-num">{NUMS[i]}</span>
+            <span className="service-num">{String(i + 1).padStart(2, "0")}</span>
             <div className="min-w-0">
               <div className="service-name">{t.kortTittel}</div>
               <div className="service-desc">{t.kortBeskrivelse}</div>

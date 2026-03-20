@@ -26,7 +26,7 @@ export default function OmOss() {
         <section className="section-white section-py-sm">
           <div className="container-site">
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-              {[{ v: "30+", l: "Byer dekket" }, { v: "5", l: "Tjenester" }, { v: "24t", l: "Responstid" }, { v: "100%", l: "Gratis tilbud" }].map(({ v, l }) => (
+              {[{ v: "30+", l: "Byer dekket" }, { v: "8", l: "Tjenester" }, { v: "24t", l: "Responstid" }, { v: "100%", l: "Gratis tilbud" }].map(({ v, l }) => (
                 <div key={l} className="text-center">
                   <div className="font-display font-extrabold text-display-lg text-brand-500">{v}</div>
                   <div className="text-body-sm text-neutral-400">{l}</div>

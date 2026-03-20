@@ -7,6 +7,9 @@ const TJENESTE_LINKS = [
   { label: "Male hus utvendig", href: "/tjenester/male-hus-utvendig" },
   { label: "Etterisolering", href: "/tjenester/etterisolering" },
   { label: "Vaske fasade", href: "/tjenester/vaske-fasade" },
+  { label: "Legge nytt tak", href: "/tjenester/legge-nytt-tak" },
+  { label: "Takreparasjon", href: "/tjenester/takreparasjon" },
+  { label: "Takrenner og beslag", href: "/tjenester/takrenner-og-beslag" },
 ];
 
 const BY_LINKS = [

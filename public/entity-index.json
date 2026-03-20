@@ -2,7 +2,7 @@
   "site": "fasadeteknikk.no",
   "navn": "Fasadeteknikk",
   "type": "ProfessionalServicePlatform",
-  "bransje": "Fasade / Kledning / Rehabilitering / Maling",
+  "bransje": "Fasade / Kledning / Rehabilitering / Maling / Tak / Taktekking",
   "land": "Norge",
   "sprak": "nb-NO",
   "entiteter": {
@@ -11,7 +11,10 @@
       { "id": "bytte-kledning", "navn": "Bytte kledning", "url": "/tjenester/bytte-kledning", "prisMin": 1200, "prisMax": 3500 },
       { "id": "male-hus", "navn": "Male hus utvendig", "url": "/tjenester/male-hus-utvendig", "prisMin": 300, "prisMax": 800 },
       { "id": "etterisolering", "navn": "Etterisolering fasade", "url": "/tjenester/etterisolering", "prisMin": 800, "prisMax": 2500 },
-      { "id": "vaske-fasade", "navn": "Vaske fasade", "url": "/tjenester/vaske-fasade", "prisMin": 50, "prisMax": 200 }
+      { "id": "vaske-fasade", "navn": "Vaske fasade", "url": "/tjenester/vaske-fasade", "prisMin": 50, "prisMax": 200 },
+      { "id": "legge-nytt-tak", "navn": "Legge nytt tak", "url": "/tjenester/legge-nytt-tak", "prisMin": 1500, "prisMax": 4000 },
+      { "id": "takreparasjon", "navn": "Takreparasjon", "url": "/tjenester/takreparasjon", "prisMin": 500, "prisMax": 2500 },
+      { "id": "takrenner-beslag", "navn": "Takrenner og beslag", "url": "/tjenester/takrenner-og-beslag", "prisMin": 300, "prisMax": 1200 }
     ],
     "geografi": {
       "dekning": "Hele Norge",

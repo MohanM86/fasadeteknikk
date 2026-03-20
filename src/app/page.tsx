@@ -13,7 +13,7 @@ import { formatPrisIntervall } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "Fasadeteknikk – Alt om fasade, kledning og rehabilitering i Norge",
-  description: "Norges ledende plattform for fasade og fasadearbeid. Finn kvalifiserte firma for rehabilitering, kledning, maling og etterisolering. Gratis tilbud.",
+  description: "Norges ledende plattform for fasade og fasadearbeid. Finn kvalifiserte firma for fasade, tak, kledning, maling og etterisolering. Gratis tilbud.",
   alternates: { canonical: "https://fasadeteknikk.no" },
 };
 
@@ -82,7 +82,7 @@ export default function HomePage() {
         <section className="section-dark">
           <div className="container-site py-8">
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
-              {[{ v: "30+", l: "Byer dekket" }, { v: "5", l: "Tjenester" }, { v: "24t", l: "Responstid" }, { v: "100%", l: "Gratis" }].map(({ v, l }) => (
+              {[{ v: "30+", l: "Byer dekket" }, { v: "8", l: "Tjenester" }, { v: "24t", l: "Responstid" }, { v: "100%", l: "Gratis" }].map(({ v, l }) => (
                 <div key={l} className="text-center">
                   <div className="font-display font-extrabold text-4xl text-brand-500 tracking-tight">{v}</div>
                   <div className="text-xs text-neutral-500 mt-1">{l}</div>
