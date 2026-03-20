@@ -19,7 +19,7 @@
       { "id": "takrenner-beslag", "navn": "Takrenner og beslag", "url": "/tjenester/takrenner-og-beslag", "prisMin": 300, "prisMax": 1200 }
     ],
     "geografi": {
-      "dekning": "Hele Norge – alle 15 fylker og 353 kommuner",
+      "dekning": "Hele Norge – alle 15 fylker og 357 kommuner",
       "fylker": ["Oslo", "Akershus", "Østfold", "Buskerud", "Vestfold", "Telemark", "Innlandet", "Agder", "Rogaland", "Vestland", "Møre og Romsdal", "Trøndelag", "Nordland", "Troms", "Finnmark"],
       "populaereByer": ["Oslo", "Bergen", "Trondheim", "Stavanger", "Kristiansand", "Drammen", "Fredrikstad", "Tromsø"],
       "fylkeSider": "/fylke",

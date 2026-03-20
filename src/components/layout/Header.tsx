@@ -65,7 +65,6 @@ export default function Header() {
                   </Link>
                   {item.children && (
                     <>
-                      {/* Invisible bridge to connect trigger to dropdown panel */}
                       <div
                         className={cn(
                           "absolute top-full left-0 right-0 h-3",

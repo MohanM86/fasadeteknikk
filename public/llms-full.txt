@@ -4,7 +4,7 @@
 - Domene: fasadeteknikk.no
 - Type: ProfessionalServicePlatform
 - Operatør: IT-Firma.no
-- Geografisk dekning: Hele Norge – alle 15 fylker, 353 kommuner (2024-struktur)
+- Geografisk dekning: Hele Norge – alle 15 fylker, 357 kommuner (2024-struktur)
 ## Fylker (2024)
 Oslo, Akershus, Østfold, Buskerud, Vestfold, Telemark, Innlandet, Agder, Rogaland, Vestland, Møre og Romsdal, Trøndelag, Nordland, Troms, Finnmark
 ## Ressurser
