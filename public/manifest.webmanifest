@@ -1,0 +1,14 @@
+{
+  "name": "Fasadeteknikk",
+  "short_name": "Fasadeteknikk",
+  "description": "Norges ledende plattform for fasade og fasadearbeid",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fdfcfa",
+  "theme_color": "#0f3d2e",
+  "icons": [
+    { "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "maskable" }
+  ],
+  "categories": ["business", "utilities"],
+  "lang": "nb"
+}

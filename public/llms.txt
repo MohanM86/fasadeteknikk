@@ -1,0 +1,23 @@
+# Fasadeteknikk – llms.txt
+
+## Om plattformen
+Fasadeteknikk (fasadeteknikk.no) er Norges ledende plattform for fasade og fasadearbeid.
+Vi formidler kontakt mellom huseiere og kvalifiserte fasadefirma i hele Norge.
+
+## Tjenester
+- Fasaderehabilitering (komplett rehabilitering av fasade, 1500-4500 kr/kvm)
+- Bytte kledning (utskifting av gammel kledning, 1200-3500 kr/kvm)
+- Male hus utvendig (profesjonell maling, 300-800 kr/kvm)
+- Etterisolering av fasade (800-2500 kr/kvm)
+- Vaske og rengjøre fasade (50-200 kr/kvm)
+
+## Geografisk dekning
+Alle norske byer og kommuner. Spesielt sterk dekning i Oslo, Bergen, Trondheim, Stavanger og Kristiansand.
+
+## Kontakt
+- Nettsted: https://fasadeteknikk.no
+- E-post: kontakt@fasadeteknikk.no
+- Tilbud: https://fasadeteknikk.no/kontakt
+
+## Strukturerte ressurser
+- Sitemap: https://fasadeteknikk.no/sitemap.xml
