@@ -1,21 +1,30 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { ArrowRight, MapPin, ArrowUpRight } from "lucide-react";
+import { ArrowRight, MapPin, ArrowUpRight, Building2 } from "lucide-react";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import StickyMobileCTA from "@/components/layout/StickyMobileCTA";
 import LeadForm from "@/components/forms/LeadForm";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import FAQ from "@/components/ui/FAQ";
-import { FYLKER, getFylke, getAllFylkeSlugs, getKommunerByFylke } from "@/data/geografi";
+import FirmaCatalog from "@/components/ui/FirmaCatalog";
+import {
+  FYLKER,
+  getFylke,
+  getAllFylkeSlugs,
+  getKommunerByFylke,
+} from "@/data/geografi";
 import { TJENESTER } from "@/data/tjenester";
+import { getFirmaByFylke, hasFylkeFirmaData } from "@/data/firma";
 import { formatPrisIntervall } from "@/lib/utils";
 
-interface Props { params: { slug: string } }
+interface Props {
+  params: { slug: string };
+}
 
 export async function generateStaticParams() {
-  return getAllFylkeSlugs().map(slug => ({ slug }));
+  return getAllFylkeSlugs().map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -24,7 +33,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: fylke.seoTitle,
     description: fylke.seoDesc,
-    alternates: { canonical: `https://fasadeteknikk.no/fylke/${fylke.slug}` },
+    alternates: {
+      canonical: `https://fasadeteknikk.no/fylke/${fylke.slug}`,
+    },
   };
 }
 
@@ -33,16 +44,21 @@ export default function FylkeSide({ params }: Props) {
   if (!fylke) notFound();
 
   const kommuner = getKommunerByFylke(fylke.slug);
-  const andreFylker = FYLKER.filter(f => f.slug !== fylke.slug).slice(0, 8);
+  const andreFylker = FYLKER.filter((f) => f.slug !== fylke.slug).slice(0, 8);
+
+  const firma = getFirmaByFylke(fylke.slug);
+  const harFirma = firma.length > 0;
 
   const faqItems = [
     {
       sporsmal: `Hva koster fasadearbeid i ${fylke.navn}?`,
-      svar: `Prisene i ${fylke.navn} følger nasjonale priser. Maling koster 300–800 kr per kvm, kledning 1 200–3 500 kr per kvm, og komplett rehabilitering 1 500–4 500 kr per kvm. Byer som ${fylke.navn === "Oslo" ? "Oslo sentrum" : "Bergen og Oslo"} kan ligge 10–20% høyere.`,
+      svar: `Prisene i ${fylke.navn} følger nasjonale priser. Maling koster 300–800 kr per kvm, kledning 1 200–3 500 kr per kvm, og komplett rehabilitering 1 500–4 500 kr per kvm.`,
     },
     {
-      sporsmal: `Finnes det mange fasadefirma i ${fylke.navn}?`,
-      svar: `Ja, ${fylke.navn} har et godt tilbud av kvalifiserte fasadefirma. Vi kobler deg med firma i ditt nærområde som er kjent med lokale krav og klimaforhold.`,
+      sporsmal: `Hvor mange fasadefirma finnes i ${fylke.navn}?`,
+      svar: harFirma
+        ? `Det er ${firma.length} registrerte firma innen fasade, maling, murer og byggearbeid i ${fylke.navn} ifølge Brønnøysundregistrene.`
+        : `${fylke.navn} har et godt tilbud av kvalifiserte fasadefirma. Vi kobler deg med firma i ditt nærområde.`,
     },
     {
       sporsmal: `Trenger jeg byggetillatelse for fasadearbeid i ${fylke.navn}?`,
@@ -61,12 +77,13 @@ export default function FylkeSide({ params }: Props) {
         <div className="container-site pt-5 pb-2">
           <Breadcrumb
             items={[
-              { navn: "Fylker", href: "/fylke/oslo" },
+              { navn: "Fylker", href: "/fylke" },
               { navn: `Fasade ${fylke.navn}` },
             ]}
           />
         </div>
 
+        {/* Hero */}
         <section className="hero-pattern" aria-labelledby="fylke-h">
           <div className="container-site py-10 sm:py-14">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
@@ -94,11 +111,24 @@ export default function FylkeSide({ params }: Props) {
                       {kommuner.length} kommuner
                     </div>
                   )}
+                  {harFirma && (
+                    <div className="badge-brand">
+                      <Building2 className="w-3 h-3" />
+                      {firma.length} firma
+                    </div>
+                  )}
                 </div>
-                <Link href="#tilbud" className="btn-primary">
-                  Få gratis tilbud i {fylke.navn}{" "}
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
+                <div className="flex flex-wrap gap-3">
+                  <Link href="#tilbud" className="btn-primary">
+                    Få gratis tilbud i {fylke.navn}{" "}
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
+                  {harFirma && (
+                    <Link href="#firma" className="btn-secondary">
+                      Se alle firma <Building2 className="w-4 h-4" />
+                    </Link>
+                  )}
+                </div>
               </div>
               <div id="tilbud">
                 <LeadForm kilde={`fylke-${fylke.slug}`} />
@@ -107,6 +137,20 @@ export default function FylkeSide({ params }: Props) {
           </div>
         </section>
 
+        {/* Firma catalog */}
+        {harFirma && (
+          <section
+            id="firma"
+            className="section-white section-py-sm"
+            aria-labelledby="firma-h"
+          >
+            <div className="container-site">
+              <FirmaCatalog firma={firma} kommuneNavn={fylke.navn} />
+            </div>
+          </section>
+        )}
+
+        {/* Kommuner */}
         {kommuner.length > 0 && (
           <section className="section-light section-py-sm">
             <div className="container-site">
@@ -114,7 +158,7 @@ export default function FylkeSide({ params }: Props) {
                 Kommuner i {fylke.navn}
               </h2>
               <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
-                {kommuner.map(kommune => (
+                {kommuner.map((kommune) => (
                   <Link
                     key={kommune.slug}
                     href={`/kommune/${kommune.slug}`}
@@ -136,13 +180,14 @@ export default function FylkeSide({ params }: Props) {
           </section>
         )}
 
+        {/* Tjenester */}
         <section className="section-white section-py-sm">
           <div className="container-site">
             <h2 className="font-display font-bold text-heading-xl text-neutral-900 mb-5">
               Tjenester i {fylke.navn}
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-              {TJENESTER.map(t => (
+              {TJENESTER.map((t) => (
                 <Link
                   key={t.slug}
                   href={`/tjenester/${t.slug}`}
@@ -160,6 +205,7 @@ export default function FylkeSide({ params }: Props) {
           </div>
         </section>
 
+        {/* FAQ */}
         <section className="section-light section-py-sm">
           <div className="container-site max-w-3xl">
             <FAQ
@@ -169,13 +215,14 @@ export default function FylkeSide({ params }: Props) {
           </div>
         </section>
 
+        {/* Andre fylker */}
         <section className="section-white section-py-sm">
           <div className="container-site">
             <h2 className="font-display font-bold text-heading-xl text-neutral-900 mb-4">
               Fasade i andre fylker
             </h2>
             <div className="flex flex-wrap gap-2">
-              {andreFylker.map(f => (
+              {andreFylker.map((f) => (
                 <Link
                   key={f.slug}
                   href={`/fylke/${f.slug}`}
@@ -188,6 +235,7 @@ export default function FylkeSide({ params }: Props) {
           </div>
         </section>
 
+        {/* CTA */}
         <section className="section-py-sm">
           <div className="container-site">
             <div className="cta-block text-center relative z-10">
