@@ -18,8 +18,8 @@ const GEO_LINKS = [
   { label: "Trondheim", href: "/by/trondheim" },
   { label: "Stavanger", href: "/by/stavanger" },
   { label: "Kristiansand", href: "/by/kristiansand" },
-  { label: "Trøndelag", href: "/fylke/trøndelag" },
-  { label: "Vestland", href: "/fylke/vestland" },
+  { label: "Akershus", href: "/fylke/akershus" },
+  { label: "Trøndelag", href: "/fylke/trondelag" },
 ];
 const INFO_LINKS = [
   { label: "Om oss", href: "/om-oss" }, { label: "Priser", href: "/priser" },
@@ -61,7 +61,7 @@ export default function Footer() {
           <p className="text-xs text-neutral-600">&copy; {new Date().getFullYear()} Fasadeteknikk.no – En tjeneste fra <a href="https://it-firma.no" className="text-neutral-500 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">IT-Firma.no</a></p>
           <div className="flex items-center gap-4">
             <Link href="/personvern" className="text-xs text-neutral-600 hover:text-neutral-400 transition-colors">Personvern</Link>
-            <span className="text-xs text-neutral-700">Dekker alle norske fylker og kommuner</span>
+            <span className="text-xs text-neutral-700">15 fylker – 353 kommuner</span>
           </div>
         </div>
       </div>
